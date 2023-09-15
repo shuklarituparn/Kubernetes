@@ -8,3 +8,9 @@ A Kubernetes cluster consists of two types of resources:
     Nodes are the workers that run applications
 
 ![Alt text](https://d33wubrfki0l68.cloudfront.net/283cc20bb49089cb2ca54d51b4ac27720c1a7902/34424/docs/tutorials/kubernetes-basics/public/images/module_01_cluster.svg "Kubernetes cluster")
+
+The Control Plane is responsible for managing the cluster. The Control Plane coordinates all activities in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.
+
+A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster
+
+Node-level components, such as the kubelet, communicate with the control plane using the Kubernetes API, which the control plane exposes. End users can also use the Kubernetes API directly to interact with the cluster.
