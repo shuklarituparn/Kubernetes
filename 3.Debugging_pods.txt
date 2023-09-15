@@ -1,0 +1,39 @@
+kubectl describe pod pod-name
+
+this command is used to get all the information about the pod 
+
+kubectl logs mongo-depl-79585f75cf-mt9tw // This is what the mongodb container logged inside the pod
+
+kubectl get pod  //to get the pods running 
+
+//to get the interactive terminal inside the pod we have the command 
+
+kubectl exec -it mongo-depl-79585f75cf-mt9tw  --bin/bash   //it is the interactive terminal inside the pod 
+
+
+exit to exit the it shell inside the pod
+
+kubectl get deployment // to get the deployment
+
+kubectl get pods  //to get the pods 
+
+// To delete the deployment 
+
+kubectl delete deployment deployment-name
+
+
+rituparn@IdeaPad:~$ kubectl delete deployment mongo-depl
+deployment.apps "mongo-depl" deleted
+
+rituparn@IdeaPad:~$ kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-depl-c8ddc48bf-c7sjr   1/1     Running   0          44m
+
+rituparn@IdeaPad:~$ kubectl get replicaset
+NAME                    DESIRED   CURRENT   READY   AGE
+nginx-depl-6b7698588c   0         0         0       73m
+nginx-depl-c8ddc48bf    1         1         1       45m
+
+
+//as we can see the mongoDB is deleted
+
