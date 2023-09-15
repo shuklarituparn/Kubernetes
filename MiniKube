@@ -1,0 +1,31 @@
+minikube start #to start the cluster
+
+kubectl get po -A //To access the cluster from terminal
+
+Pause Kubernetes without impacting deployed applications:
+
+minikube pause
+
+Unpause a paused instance:
+
+minikube unpause
+
+Halt the cluster:
+
+minikube stop
+
+Change the default memory limit (requires a restart):
+
+minikube config set memory 9001
+
+Browse the catalog of easily installed Kubernetes services:
+
+minikube addons list
+
+Create a second cluster running an older Kubernetes release:
+
+minikube start -p aged --kubernetes-version=v1.16.1
+
+Delete all of the minikube clusters:
+
+minikube delete --all
