@@ -74,3 +74,37 @@ Template also has its metadata and spec sections
 The configuration inside the template applies to the pod
 
 It has a blueprints for a pod, like name, image and the port on which it'll open
+
+
+
+CONNECTING PODS:
+
+
+LABELS, SELECTORS AND PODS:  
+
+Metadata part contains the labels
+
+and the specification part contains the SELECTORS
+
+Metadata you give the key value pairs 
+
+labels: 
+  app:nginx
+
+
+The label is then matched by the selector 
+
+selector:
+  matchlabels:
+  app: nginx
+
+deployment has its own label
+
+app:nginx
+
+these two labels are used by the service selectors
+
+service should know which pods are registered to it, which pods are connected to it, and it gets to know it by selectors
+
+
+
