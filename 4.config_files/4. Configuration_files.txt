@@ -120,3 +120,17 @@ Service should know which pod it should forward the request to and to which port
 kubectl describe serive service-name 
 
 using it we can get the endpoints on which the service is defined
+
+
+kubectl get pods -o wide //this will print all the NECESSARY data about the pods and the IP address
+
+
+kubectl get deployment nginx-depl -o yaml //we want the output in the YAML format
+
+
+now after we get the output, we want to store it in the yaml format too
+
+kubectl get deployment nginx-depl -o yaml > nginx-depl-result.yaml
+
+this command will save the new data in yaml file that it gets from etcd
+
