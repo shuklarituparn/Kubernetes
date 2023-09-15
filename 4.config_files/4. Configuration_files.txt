@@ -47,3 +47,30 @@ kubectl apply -f config_file.yaml  //typing it again will make kubectl to update
 
 kubectl -delete -f filename
 
+Each configuration file has 3 part
+
+1. Metadata which has the name
+2. specification: which we specify as a service or deployment (Attribute specific to the kind of service we create)
+
+3. Status: Desired != actual then kubernetes knows that something needs to be fixed 
+
+k8s update the state continiously
+
+k8s get the status from etcd which holds the current status of any kubernetes components
+
+
+YAML: Human friendly data serialization service for the programming language
+
+syntax:strict indentations 
+
+
+Can use YAMLonline validator to fix the error in the indentations 
+
+
+- ITS NECESSARY AND DESIRED TO STORE THE CONFIG FILE WITH THE connected
+
+Template also has its metadata and spec sections
+
+The configuration inside the template applies to the pod
+
+It has a blueprints for a pod, like name, image and the port on which it'll open
