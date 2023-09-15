@@ -107,4 +107,16 @@ these two labels are used by the service selectors
 service should know which pods are registered to it, which pods are connected to it, and it gets to know it by selectors
 
 
+PORTS::::::::::::
 
+
+The service has its own port where the service is accessible at 
+
+when other service needs to send request to NGINX port it needs to send at port 80
+
+Service should know which pod it should forward the request to and to which port
+
+
+kubectl describe serive service-name 
+
+using it we can get the endpoints on which the service is defined
