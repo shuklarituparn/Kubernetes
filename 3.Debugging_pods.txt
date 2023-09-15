@@ -37,3 +37,10 @@ nginx-depl-c8ddc48bf    1         1         1       45m
 
 //as we can see the mongoDB is deleted
 
+kubectl create deployment deployment-name image option1 option2  //image is the image it is based on 
+
+
+
+
+
+

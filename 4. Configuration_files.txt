@@ -1,0 +1,49 @@
+kubectl create deployment deployment-name image option1 option2  
+
+
+//image is the image it is based on 
+
+//option1 option2 are the options we give it
+
+//this is saved in the configuration file and the file is executed as
+
+kubectl apply -f config_file.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment  //name of the deployment
+  labels:
+    app: nginx
+spec:                   //specification for the deployment
+  replicas: 1  //how many replicas to create 
+  selector:
+   matchLabels: 
+     app: nginx
+  template:  //template and spec is the blueprints for the deployment
+    metadata:
+      labels:
+        app: nginx
+    spec:          //specification for the pods
+      containers:
+        -name: nginx
+         image: nginx:1.16
+         ports:
+           -containerPort: 80
+
+
+           Key points to note:
+
+Ensure that there is proper spacing before the field names and values.
+Indentation should use spaces (typically two spaces) consistently.
+Use colons (:) to separate field names and values.
+Lists (like containers and ports) should be indented properly with a - before each list item.
+Make sure there are no extra spaces or tabs that could break the YAML structure.
+
+With these corrections, your YAML file should be valid, and you should be able to apply it using kubectl apply -f nginx_config.yaml without encountering any parsing errors.
+~
+kubectl apply -f config_file.yaml  //typing it again will make kubectl to update the configuration file
+
+
+kubectl -delete -f filename
+
