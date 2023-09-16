@@ -1,0 +1,13 @@
+2  deployment /PODS
+
+2 Service 
+
+We'll have 2 pods
+
+1st will be the MongoDB and the 2nd will be the MongoExpress 
+
+Then a deployment config file and the config map that contains the DB URL and the  secret that contains the DB username and password
+
+We'll reference both in the deployment
+
+The MongoExpress will be an external service that runs on the browser and it'll forward to the MongoExpress pod which will then forward it to the pod running MongoDB locally
